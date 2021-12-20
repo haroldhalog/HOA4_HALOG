@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks: 
+    - name: Bash
+      ansible.builtin.shell: hostname
+      register: response
+    - debug: msg="{{ response.stdout }}"
